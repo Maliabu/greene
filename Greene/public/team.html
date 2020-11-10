@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!--Import bootstrap4.css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dosis">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Karla">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css" media="screen,projection" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <style media="screen">
+        body {
+            background: -webkit-linear-gradient(left, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)), url("images/body.jpg");
+            background-size: contain;
+            background-repeat: repeat;
+            overflow-x: hidden;
+        }
+        
+        .new {
+            background-image: url("images/garden.jpg");
+            background-size: contain;
+            background-repeat: repeat;
+        }
+        
+        .greene {
+            background-image: url("images/first.jpg");
+            background-size: cover;
+        }
+        
+        .paint {
+            background-image: url("images/vector4.jpg");
+            background-size: contain;
+        }
+        
+        .back {
+            background-image: url("images/vector2.png");
+        }
+        
+        .nav-link {
+            color: white !important;
+        }
+        
+        input {
+            color: white !important;
+        }
+        
+        .active {
+            padding-bottom: 0px;
+            border-bottom: 3px solid white !important;
+        }
+        
+        .profile {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: 1px solid #212121;
+        }
+        
+        button {
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+        
+        .par {
+            font-size: 18px !important;
+        }
+    </style>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light pl-0 grey darken-4 hidden-md">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">
+                        <img src="images/logo.jpg" width="80" height="60" alt="Greene" class="mb-1"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Land and Property</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Designs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">The Team</a>
+                </li>
+            </ul>
+            <form class="form-inline offset-lg-3" action="index.html" method="post" style="width: 25rem;">
+                <input type="text" name="search" placeholder="search">
+            </form>
+        </nav>
+    </div>
+    <div class="center-align pb-0">
+        <div class="green darken-3 d-sm-none d-md-block hide-on-med-and-down">
+            <ul class="nav justify-content-center nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Land</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link border-left" href="#">Plots</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link border-left" href="#">Houses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link border-left" href="#">Architectural designs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link border-left" href="#">Compounds and Gardens</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class=" pb-5 white">
+            <h3 class="display-4 black-text">The Team</h3>
+            <div class="mt-5 next">
+                <div class="card w-20 float-lg-right mt-lg-0 hide-on-med-and-down mr-2">
+                    <div class="card-body">
+                        <h5 class="card-title">My <span class="green-text text-darken-4 font-weight-bolder">Greene</span></h5>
+                        <img src="images/logo.jpg" width="80" height="60" alt="Greene" class="mb-1 border profile"></a>
+                        <p>Profile</p>
+                        <a href="#" class="btn green darken-4">Login</a> <a href="#" class="btn red darken-4">Logout</a>
+                        <p class="text-wrap" style="width: 10rem;">Don't have an account? SignUp or Register!</p><a href="#" class="btn black darken-4">Signup</a>
+                    </div>
+                </div>
+                <h3 class="display-3 mt-10 ml-5 pb-lg-5 pt-lg-5 white-text text-wrap" style="width: 6rem;"><span class="font-weight-bold">Greene</span> Reservoir Management</h3>
+            </div>
+            <div class="mt-5 next">
+                <div class="card w-20 float-lg-right mt-lg-0 hide-on-med-and-down mr-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Comments & <span class="green-text text-darken-4 font-weight-bolder">Queries</span></h5>
+                        <form action="" method="post">
+                            <input type="email" name="email" id="email" placeholder="email">
+                            <input type="text" name="comment" id="comment" placeholder="comment">
+                            <a href="#" class="btn red darken-4">Submit</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="pt-5 pb-5 grey darken-4 white-text">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 grey darken-4">
+                    <p class="white-text text-decoration-underline display-4 text-darken-3 text-mute">Greene Reservoir Management</p>
+                </div>
+                <div class="col-lg-6 col-sm-12 border-left text-center">
+                    <h4>Contact Us</h4>
+                    <h6>Administrative reach</h6>
+                    <p> <a href="mailto:akizzam@2gofinancialservices.com">Email: Administration</a> | <a href="tel:+256772971878">Tel: Administration</a> </p>
+                    <h6>Main Office</h6>
+                    <p> <a href="mailto:hr@2gofinancialservices.com">Email: Main Office</a> | <a href="tel:+256772971878">Tel: Main Office</a> </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="p-2 grey darken-3">
+                            <h5>Social Media Links</h5>
+                            <a href="https://www.facebook.com"> <button type="button" name="button" class="grey darken-4 white-text profile"> <h6>f</h6> </button> </a>
+                            <a href="https://www.twitter.com"><button type="button" name="button" class="grey darken-4 white-text profile"> <h6>t</h6> </button></a>
+                        </div>
+                        <h5>Location</h5>
+                        <p>Find us at 72 street, Ovacado Lane, Bushwell Dr. Alaska</p>
+                    </div>
+                    <div class="col grey darken-3 pb-2">
+                        <h5>Quick Links & </h5>
+                        <a href="">
+                            <h5>FAQs</h5>
+                        </a>
+                        <a href="#">construction site management</a> <a href="#">Comprehensive land registration</a> <a href="#">Land title processing</a>
+                        <a href="#">Interior and exterior Designs</a> <a href="#">Plans</a> <a href="#">Land leasing</a>
+                        <h6>Send a query, comment, suggestion here below...</h6>
+                        <button type="button" name="button" class="btn grey darken-4">Get started</button>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center border-top pt-3">&copy;2020.copyright by Greene Reservoir Management.</p>
+        </div>
+        <!-- Optional JavaScript -->
+        <script type="text/javascript">
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function(form) {
+                        form.addEventListener('submit', function(event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+        </script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="jquery-3.3.1/dist/jquery.slim.min.js" charset="utf-8" type="text/javascript"></script>
+        <script src="js/bootstrap.bundle.min.js" charset="utf-8" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" charset="utf-8" type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

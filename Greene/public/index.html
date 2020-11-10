@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <!--Import bootstrap4.css-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dosis">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Karla">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css" media="screen,projection" />
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+  <body>
+    <style media="screen">
+      body{
+        background: -webkit-linear-gradient(left, rgb(0,0,0), rgba(0,0,0,0.2)), url("images/body.jpg");
+        background-size: contain;
+        background-repeat: repeat;
+        overflow-x: hidden;
+      }
+      .new{
+        background-image: url("images/garden.jpg");
+        background-size: contain;
+        background-repeat: repeat;
+      }
+      .greene{
+        background-image: url("images/first.jpg");
+        background-size: cover;
+      }
+      .paint{
+        background-image: url("images/vector4.jpg");
+        background-size: contain;
+      }
+      .back{
+        background-image: url("images/vector2.png");
+      }
+      .nav-link{
+        color: white !important;
+      }
+      input{
+        color: white !important;
+      }
+      .active{
+        padding-bottom: 0px;
+        border-bottom: 3px solid white !important;
+      }
+      .profile{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        border: 1px solid #212121;
+      }
+      button{
+        border: 1px solid white;
+        border-radius: 5px;
+      }
+      .par{
+        font-size: 18px !important;
+      }
+      .on{
+        background: -webkit-linear-gradient(top, rgba(0,140,0,0.8), rgba(255,255,255,0.5)), url("images/greene.jpg");
+      }
+      .land{
+        background-color: rgba(255,255,255,0.9);
+      }
+    </style>
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light pl-0 grey darken-4 hidden-md">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">
+              <img src="images/logo.jpg" width="80" height="60" alt="Greene" class="mb-1"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Land and Property</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Designs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="team.html">The Team</a>
+          </li>
+        </ul>
+        <form class="form-inline offset-lg-3" action="index.html" method="post" style="width: 25rem;">
+          <input type="text" name="search" placeholder="search">
+        </form>
+      </nav>
+    </div>
+    <div class="center-align pb-0">
+      <div class="green darken-3 d-sm-none d-md-block hide-on-med-and-down">
+        <ul class="nav justify-content-center nav-fill">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Land</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link border-left" href="#">Plots</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link border-left" href="#">Houses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link border-left" href="#">Architectural designs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link border-left" href="#">Compounds and Gardens</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mt-5 next pb-5">
+        <div class="card w-20 float-lg-right mt-lg-0 hide-on-med-and-down mr-2">
+          <div class="card-body">
+            <h5 class="card-title">My <span class="green-text text-darken-4 font-weight-bolder">Greene</span></h5>
+            <img src="images/logo.jpg" width="80" height="60" alt="Greene" class="mb-1 border profile"></a> <p>Profile</p>
+            <a href="#" class="btn green darken-4">Login</a> <a href="#" class="btn red darken-4">Logout</a>
+            <p class="text-wrap" style="width: 10rem;">Don't have an account? SignUp or Register!</p><a href="#" class="btn black darken-4">Signup</a>
+          </div>
+        </div>
+        <h3 class="display-3 mt-10 ml-5 pb-lg-5 pt-lg-5 white-text text-wrap" style="width: 6rem;"><span class="font-weight-bold">Greene</span> Reservoir Management</h3>
+      </div>
+      <div class="pb-0 white new">
+          <div class="row justify-content-center land">
+            <div class="col-lg-6 col-sm-4">
+              <h4 class="display-4 green white-text darken-3 p-3 border font-weight-bold land">Lands & Property</h4>
+            </div>
+            <div class="col-lg-2 col-sm-4"><a href="">
+              <h5 class=" border-right p-1 black-text">Property Management</h5></a>
+            </div>
+            <div class="col-lg-2 col-sm-4"><a href="">
+              <h5 class=" p-1 black-text ">Land Leasing</h5></a>
+            </div>
+            <div class="col-lg-2 col-sm-4"><a href="">
+              <h5 class="p-1 black-text border-left ">Land Registration Services</h5></a>
+            </div>
+          </div>
+          <div class="row black-text">
+            <div class="row land mt-5">
+              <div class="col-4 border-right p-5">
+              <h5>Land or Property?</h5>
+                <p class="white p-2">Start your quick search here. Would you like land or property?</p>
+                <button class="grey darken-4 white-text btn-block border-0"><h5>LAND</h5></button><button class="green darken-4 white-text btn-block border-0"><h5>PROPERTY</h5></button>
+              </div>
+              <div class="col-8"> <a href="lands.html" class="black-text">
+                <h5><u>
+                  Our best Land profiles. <br>View more Lands and properties</u></a>
+                </h5><img src="images/prop2.jpg" width="250" height="200"><img src="images/nice.jpg" width="250" height="200">
+              </div>
+            </div>
+          </div>
+          <div class="row black-text p-5 paint">
+            <h3 class="offset-5 border-left grey white-text darken-4 p-4 font-weight-bolder back">CONSTRUCTION & Site Management <br><span class="font-weight-lighter green-text"> Project Management</span></h3>
+            
+            <div class="col-lg-8 col-sm-12 land black-text">
+              <div class="row">
+                <div class="col-6 pt-2">
+                  <img src="images/site1.jpg" width="300" height="200">
+                  <img src="images/vector1.png" width="250" height="200">
+                </div>
+                <div class="col-6 p-3 green darken-3">
+                  <h3 class="white-text font-weight-lighter p-3 grey darken-4">Project Management</h3>
+                  <h5 class="font-weight-bold white-text">Greene Estate for all your project management solutions will make certain that:</h5>
+                  <dl class="white-text grey darken-4 p-2">
+                    <li>Construction works keep within limit and budget</li>
+                    <li>We manage all delays and problems encountered during the Project</li>
+                    <li>We do quality and health risk and safety management</li>
+                    <li>We inspect construction works to ensure quality work</li>
+                  </dl>
+                </div>
+                <button class="grey darken-4 white-text btn-block border-0 mt-2"><h5>APPLY</h5></button>
+              </div>
+            </div>
+            <div class="row blue darken-4 white-text">
+            
+          </div>
+          
+          <div class="p-3">
+            <!-- <form class="p-5 green darken-4 needs-validation" novalidate>
+              <h4 class="red-text">SignUp</h4>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="firstname">FirstName</label>
+                  <input type="text" class="form-control" id="firstname" required>
+                  <div class="invalid-feedback">
+                    We would love to know you
+                  </div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="lastname">LastName</label>
+                  <input type="text" class="form-control" id="lastname" required>
+                  <div class="invalid-feedback">
+                    Everyone has a lastname
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">Email</label>
+                  <input type="email" class="form-control" id="inputEmail4" aria-describedby="emailHelp" required>
+                  <div class="invalid-feedback">
+                    Emails require an @+domainname+.com respectively
+                  </div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPassword4">Password</label>
+                  <input type="password" class="form-control" id="inputPassword4" required>
+                  <div class="invalid-feedback">
+                    Password must be btn 6-8 aplhanumeric characters and contain at least a symbol.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="phonenumber">Phonenumber</label>
+                <input type="text" class="form-control" id="phonenumber" placeholder="0772971878" required>
+                <div class="invalid-feedback">
+                  phone numbers are 10 digits precicely.
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-group">
+                  <label for="FormControlFile1">Upload a profile photo here (optional)</label>
+                  <input type="file" class="form-control-file" id="FormControlFile1">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">City</label>
+                  <input type="text" class="form-control" id="inputCity" placeholder="kisasi" required>
+                  <div class="invalid-feedback">
+                    Your location helps us connect with you better.
+                  </div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputState">State</label>
+                  <select id="inputState" class="form-control" required>
+                    <option selected>Kampala</option>
+                    <option>Mukono</option>
+                    <option>wakiso</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="autoSizingCheck" required>
+                  <label class="form-check-label" for="autoSizingCheck">
+                    Remember me
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="btn red darken-4">SignUp</button>
+            </form> 
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="row p-5 on">
+      <h3 class="white-text dispaly-4 font-weight-bold p-3">Electrical installations, <br>Plumbing and <br>Painting</h3>
+      <div class="row">
+        <div class="col">
+          <h5 class="font-weight-lighter grey darken-4 white-text p-2">We draft Electrical and Plumbing outlines.</h5>
+        </div>
+        <div class="col">
+          <h5 class="font-weight-lighter green darken-4 white-text p-2">Electrical wiring and Plumbing installations as well as servicing</h5>
+        </div>
+        <div class="col">
+          <h5 class="font-weight-lighter white black-text p-2">Professional painting services and patnering with the best paint companies in Uganda</h5>
+        </div>
+      </div>
+    </div>
+    <div class="pt-5 pb-5 grey darken-4 white-text">
+      <div class="container">
+        <div class="row">
+    <div class="col-lg-6 col-sm-12 grey darken-4">
+      <p class="white-text text-decoration-underline display-4 text-darken-3 text-mute">Greene Reservoir Management</p>
+    </div>
+    <div class="col-lg-6 col-sm-12 border-left text-center">
+      <h4>Contact Us</h4>
+      <h6>Administrative reach</h6>
+      <p> <a href="mailto:akizzam@2gofinancialservices.com">Email: Administration</a> | <a href="tel:+256772971878">Tel: Administration</a> </p>
+      <h6>Main Office</h6>
+      <p> <a href="mailto:hr@2gofinancialservices.com">Email: Main Office</a> | <a href="tel:+256772971878">Tel: Main Office</a> </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="p-2 grey darken-3">
+          <h5>Social Media Links</h5>
+          <a href="https://www.facebook.com"> <button type="button" name="button" class="grey darken-4 white-text profile"> <h6>f</h6> </button> </a>
+           <a href="https://www.twitter.com"><button type="button" name="button" class="grey darken-4 white-text profile"> <h6>t</h6> </button></a>
+         </div>
+         <h5>Location</h5>
+         <p>Find us at 72 street, Ovacado Lane, Bushwell Dr. Alaska</p>
+      </div>
+      <div class="col grey darken-3 pb-2">
+        <h5>Quick Links & </h5><a href=""><h5>FAQs</h5></a>
+        <a href="#">construction site management</a> <a href="#">Comprehensive land registration</a> <a href="#">Land title processing</a>
+        <a href="#">Interior and exterior Designs</a> <a href="#">Plans</a> <a href="#">Land leasing</a>
+        <h6>Send a query, comment, suggestion here below...</h6>
+        <button type="button" name="button" class="btn grey darken-4">Get started</button>
+      </div>
+    </div>
+  </div>
+      <p class="text-center border-top pt-3">&copy;2020.copyright by Greene Reservoir Management.</p>
+    </div>
+    <!-- Optional JavaScript -->
+    <script type="text/javascript">
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+      })();
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="jquery-3.3.1/dist/jquery.slim.min.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/bootstrap.bundle.min.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" charset="utf-8" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </body>
+</html>
