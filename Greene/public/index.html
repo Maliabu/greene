@@ -23,24 +23,42 @@
 </head>
   <body>
     <style media="screen">
+      html{
+        scroll-behavior: smooth !important;
+      }
       body{
         background: -webkit-linear-gradient(left, rgb(0,0,0), rgba(0,0,0,0.2)), url("images/body.jpg");
         background-size: contain;
-        background-repeat: repeat;
+        background-repeat: no-repeat;
         overflow-x: hidden;
       }
       .new{
-        background-image: url("images/garden.jpg");
+        background: -webkit-linear-gradient(bottom, rgba(3, 3, 3, 0.774), rgba(255, 255, 255, 0.2)), url("images/garden.jpg");
         background-size: contain;
-        background-repeat: repeat;
+        background-repeat: no-repeat;
       }
       .greene{
         background-image: url("images/first.jpg");
         background-size: cover;
       }
       .paint{
-        background-image: url("images/vector4.jpg");
+        background: -webkit-linear-gradient(top, rgb(255, 255, 255), rgba(255, 255, 255, 0)),url("images/vector1.png");
         background-size: contain;
+      }
+      .painting{
+        background: -webkit-linear-gradient(bottom, rgb(255, 255, 255), rgba(0,0,0,0.2)),url("images/painting.jfif");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .plumb{
+        background: -webkit-linear-gradient(bottom, rgb(255, 255, 255), rgba(0,0,0,0.2)),url("images/plumb.jfif");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .kara{
+        background: -webkit-linear-gradient(right, rgb(255, 255, 255), rgba(0,0,0,0.2)),url("images/kara.jfif");
+        background-size: cover;
+        background-repeat: no-repeat;
       }
       .back{
         background-image: url("images/vector2.png");
@@ -69,10 +87,38 @@
         font-size: 18px !important;
       }
       .on{
-        background: -webkit-linear-gradient(top, rgba(0,140,0,0.8), rgba(255,255,255,0.5)), url("images/greene.jpg");
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.788), rgba(255, 255, 255, 0)),url("images/plan.jpg");
+        background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.788), rgba(255, 255, 255, 0)),url("images/plan.jpg");
+        background-size: cover;
       }
       .land{
         background-color: rgba(255,255,255,0.9);
+      }
+      .prop{
+        display: none;
+        width: 100%;
+        padding: 30px;
+        background-image: url("images/manage.jfif");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .close{
+        float: right;
+        font-size: 40px;
+        color: rgb(2, 54, 2);
+        transition: 250ms;
+      }
+      .close:hover{
+        color: red;
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+      button{
+        transition: 350ms;
+      }
+      button:hover{
+        background-color: transparent !important;
+        transform: scale(0.8);
       }
     </style>
     <div>
@@ -129,7 +175,7 @@
             <h5 class="card-title">My <span class="green-text text-darken-4 font-weight-bolder">Greene</span></h5>
             <img src="images/logo.jpg" width="80" height="60" alt="Greene" class="mb-1 border profile"></a> <p>Profile</p>
             <a href="#" class="btn green darken-4">Login</a> <a href="#" class="btn red darken-4">Logout</a>
-            <p class="text-wrap" style="width: 10rem;">Don't have an account? SignUp or Register!</p><a href="#" class="btn black darken-4">Signup</a>
+            <p class="text-wrap" style="width: 10rem;">Don't have an account? SignUp or Register!</p><a href="#" class="btn black darken-4" id="up">Signup</a>
           </div>
         </div>
         <h3 class="display-3 mt-10 ml-5 pb-lg-5 pt-lg-5 white-text text-wrap" style="width: 6rem;"><span class="font-weight-bold">Greene</span> Reservoir Management</h3>
@@ -137,10 +183,10 @@
       <div class="pb-0 white new">
           <div class="row justify-content-center land">
             <div class="col-lg-6 col-sm-4">
-              <h4 class="display-4 green white-text darken-3 p-3 border font-weight-bold land">Lands & Property</h4>
+              <img src="images/bee.png" height="100" width="120" alt=""><img src="images/ho.png" height="100" width="120" alt=""><h4 class="display-4 green white-text darken-4 p-2 border font-weight-lighter land">Lands & Property</h4>
             </div>
-            <div class="col-lg-2 col-sm-4"><a href="">
-              <h5 class=" border-right p-1 black-text">Property Management</h5></a>
+            <div class="col-lg-2 col-sm-4"><a href="#property"><button onclick="document.getElementById('property').style.display='block'">
+              <h5 class=" border-right p-1 black-text">Property Management</h5></button></a>
             </div>
             <div class="col-lg-2 col-sm-4"><a href="">
               <h5 class=" p-1 black-text ">Land Leasing</h5></a>
@@ -162,27 +208,68 @@
                 </h5><img src="images/prop2.jpg" width="250" height="200"><img src="images/nice.jpg" width="250" height="200">
               </div>
             </div>
-          </div>
-          <div class="row black-text p-5 paint">
-            <h3 class="offset-5 border-left grey white-text darken-4 p-4 font-weight-bolder back">CONSTRUCTION & Site Management <br><span class="font-weight-lighter green-text"> Project Management</span></h3>
-            
-            <div class="col-lg-8 col-sm-12 land black-text">
-              <div class="row">
-                <div class="col-6 pt-2">
-                  <img src="images/site1.jpg" width="300" height="200">
-                  <img src="images/vector1.png" width="250" height="200">
+            <div class="row p-1 prop grey darken-4" id="property">
+              <span onclick="document.getElementById('property').style.display='none'" class="close">&times;</span>
+              <div class="row justify-content-lg-center">
+                <img src="images/ho.png" height="100" width="120" alt=""><h4 class="black-text border border-dark p-3 font-weight-lighter">Property Management</h4></div>
+              <div class="row p-1 land">
+                <div class="col">
+                  <div class="row">
+                    <div class="col"><img src="images/marketing.png" height="200" width="200" class="circle border border-dark"></div>
+                    <div class="col"><h4 class="black-text border-bottom border-dark p-3 font-weight-lighter"> Services we offer during project management <br><b> Marketing</b></h4></div>
+                    
+                  </div>
+                  <h6>we expose your property to a wide range of potential tenants depending on your target tenant goal that you communicate to us. <br> We:
+                  </h6>
+                  <dl class="white-text green darken-4 p-2 par">
+                    <li>Use social media and websites including our own and also reach out to our wide coperate networks</li>
+                    <li>Facilitate inspection of property</li>
+                    <li>Facilitate escorted private viewings</li>
+                  </dl> 
+                  <h4 class="black-text border-bottom border-dark p-3 font-weight-lighter"><b> On-Going-Management</b></h4>
                 </div>
-                <div class="col-6 p-3 green darken-3">
-                  <h3 class="white-text font-weight-lighter p-3 grey darken-4">Project Management</h3>
-                  <h5 class="font-weight-bold white-text">Greene Estate for all your project management solutions will make certain that:</h5>
-                  <dl class="white-text grey darken-4 p-2">
+                <div class="col">
+                  <h4 class="white-text grey darken-4 p-3 font-weight-lighter">On-going Management</h4>
+                  <img src="images/mgt.jpg" alt="" height="300" width="400">
+                </div>
+              </div>
+              <div class="row land p-3">
+                <div class="col border-right border-dark"><h6 class="black-text p-3 font-weight-lighter"><b>Management Fee</b></h6></div>
+                <div class="col border-right border-dark"></div>
+                <div class="col border-right border-dark"></div>
+                <div class="col"></div>
+              </div>
+              <div class="row land p-3">
+                <div class="col border-right border-dark"></div>
+                <div class="col border-right border-dark"></div>
+                <div class="col border-right border-dark"></div>
+                <div class="col"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row black-text p-2 paint">
+            <h3 class="offset-5 border-left p-4 font-weight-lighter back grey darken-4 white-text"> <img src="images/icon1.png" height="60" width="50" alt=""> CONSTRUCTION & Site Management <br><span class="font-weight-lighter green-text"> Project Management</span>
+              <img src="images/tractor.png" alt="" height="50" width="70"></h3>
+            
+            <div class="col-lg-10 col-sm-12 black-text">
+              <div class="row">
+                <div class="col-4 p-3">
+                  <img src="images/men.jfif" alt="" class="circle border-dark border" height="300" width="300">
+                </div>
+                <div class="col-5 p-1 border-top border-dark">
+                  <h3 class="black-text font-weight-lighter">Project Management</h3>
+                  <h5 class=" black-text border-top border-dark">Greene Estate for all your project management solutions will make certain that:</h5>
+                  <dl class="white-text green darken-4 p-2">
                     <li>Construction works keep within limit and budget</li>
                     <li>We manage all delays and problems encountered during the Project</li>
                     <li>We do quality and health risk and safety management</li>
                     <li>We inspect construction works to ensure quality work</li>
-                  </dl>
+                  </dl> 
+                  <button class="white-text btn-block border-0 mt-2 grey darken-4"><h5><img src="images/drill.png" alt="" height="30" width="40"> Apply</h5></button>
                 </div>
-                <button class="grey darken-4 white-text btn-block border-0 mt-2"><h5>APPLY</h5></button>
+                <div class="col-3 p-3">
+                  <img src="images/men2.jpg" alt="" height="400" width="480">
+                </div>
               </div>
             </div>
             <div class="row blue darken-4 white-text">
@@ -268,25 +355,30 @@
         </div> -->
       </div>
     </div>
-    <div class="row p-5 on">
-      <h3 class="white-text dispaly-4 font-weight-bold p-3">Electrical installations, <br>Plumbing and <br>Painting</h3>
+    <div class="row on p-3">
+      <h3 class="white-text dispaly-4 font-weight-lighter p-4 green darken-4">Electrical installations,<b>Plumbing</b> and Painting</h3> <h3 class="p-4 green darken-4"><img src="images/house.png" height="70" width="80" alt=""></h3>
+      <div class="row px-5 border border-dark">
+        <div class="col kara p-5">
+          <img src="images/tool.png" height="70" width="80" alt="">
+          <h5 class="black-text border-right border-dark">We draft <br> Electrical and <br> Plumbing outlines.</h5>
+        </div>
+        <div class="col plumb p-5">
+          <h5 class="black-text border p-3 border-dark">Electrical wiring and <br>Plumbing installations as well as servicing</h5> 
+        </div>
+        <div class="col painting p-5">
+          <img src="images/job.png" height="70" width="80" alt="">
+          <h5 class="black-text border-left border-dark p-4">Professional painting services and patnering with the best paint companies in <br>UGANDA</h5>
+        </div>
+      </div>
       <div class="row">
-        <div class="col">
-          <h5 class="font-weight-lighter grey darken-4 white-text p-2">We draft Electrical and Plumbing outlines.</h5>
-        </div>
-        <div class="col">
-          <h5 class="font-weight-lighter green darken-4 white-text p-2">Electrical wiring and Plumbing installations as well as servicing</h5>
-        </div>
-        <div class="col">
-          <h5 class="font-weight-lighter white black-text p-2">Professional painting services and patnering with the best paint companies in Uganda</h5>
-        </div>
+        <button type="submit" class="grey darken-4 white-text border-dark px-5"> <h5>More Information</h5> </button>
       </div>
     </div>
     <div class="pt-5 pb-5 grey darken-4 white-text">
       <div class="container">
         <div class="row">
     <div class="col-lg-6 col-sm-12 grey darken-4">
-      <p class="white-text text-decoration-underline display-4 text-darken-3 text-mute">Greene Reservoir Management</p>
+      <p class="green-text text-decoration-underline display-4 text-darken-3 text-mute">Greene Reservoir Management</p>
     </div>
     <div class="col-lg-6 col-sm-12 border-left text-center">
       <h4>Contact Us</h4>
@@ -299,20 +391,22 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="p-2 grey darken-3">
+        <div class="p-2 border">
           <h5>Social Media Links</h5>
-          <a href="https://www.facebook.com"> <button type="button" name="button" class="grey darken-4 white-text profile"> <h6>f</h6> </button> </a>
-           <a href="https://www.twitter.com"><button type="button" name="button" class="grey darken-4 white-text profile"> <h6>t</h6> </button></a>
+          <a href="https://www.facebook.com"> <button type="button" name="button" class="border profile"> <h6>f</h6> </button> </a>
+           <a href="https://www.twitter.com"><button type="button" name="button" class="border profile"> <h6>t</h6> </button></a>
          </div>
          <h5>Location</h5>
          <p>Find us at 72 street, Ovacado Lane, Bushwell Dr. Alaska</p>
       </div>
-      <div class="col grey darken-3 pb-2">
-        <h5>Quick Links & </h5><a href=""><h5>FAQs</h5></a>
+      <div class="col border pb-2">
+        <h5>Quick Links & </h5><a href="" class="white-text"><h5><u>FAQs</u></h5></a>
         <a href="#">construction site management</a> <a href="#">Comprehensive land registration</a> <a href="#">Land title processing</a>
         <a href="#">Interior and exterior Designs</a> <a href="#">Plans</a> <a href="#">Land leasing</a>
         <h6>Send a query, comment, suggestion here below...</h6>
-        <button type="button" name="button" class="btn grey darken-4">Get started</button>
+        <a href="#up">
+          <button type="button" name="button" class="btn grey darken-4">Get started</button>
+        </a>
       </div>
     </div>
   </div>
