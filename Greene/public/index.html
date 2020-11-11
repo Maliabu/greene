@@ -102,6 +102,9 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
+      .eom{
+        display: none;
+      }
       .close{
         float: right;
         font-size: 40px;
@@ -186,18 +189,18 @@
               <img src="images/bee.png" height="100" width="120" alt=""><img src="images/ho.png" height="100" width="120" alt=""><h4 class="display-4 green white-text darken-4 p-2 border font-weight-lighter land">Lands & Property</h4>
             </div>
             <div class="col-lg-2 col-sm-4"><a href="#property"><button onclick="document.getElementById('property').style.display='block'">
-              <h5 class=" border-right p-1 black-text">Property Management</h5></button></a>
+              <h5 class=" border-right border-dark p-1 black-text">Property Management</h5></button></a>
             </div>
             <div class="col-lg-2 col-sm-4"><a href="">
               <h5 class=" p-1 black-text ">Land Leasing</h5></a>
             </div>
             <div class="col-lg-2 col-sm-4"><a href="">
-              <h5 class="p-1 black-text border-left ">Land Registration Services</h5></a>
+              <h5 class="p-1 black-text border-left border-dark ">Land Registration Services</h5></a>
             </div>
           </div>
           <div class="row black-text">
             <div class="row land mt-5">
-              <div class="col-4 border-right p-5">
+              <div class="col-4 border-right border-dark p-5">
               <h5>Land or Property?</h5>
                 <p class="white p-2">Start your quick search here. Would you like land or property?</p>
                 <button class="grey darken-4 white-text btn-block border-0"><h5>LAND</h5></button><button class="green darken-4 white-text btn-block border-0"><h5>PROPERTY</h5></button>
@@ -230,20 +233,56 @@
                 </div>
                 <div class="col">
                   <h4 class="white-text grey darken-4 p-3 font-weight-lighter">On-going Management</h4>
-                  <img src="images/mgt.jpg" alt="" height="300" width="400">
+                  <img src="images/mgt.jpg" alt="" height="400" width="500">
                 </div>
               </div>
-              <div class="row land p-3">
-                <div class="col border-right border-dark"><h6 class="black-text p-3 font-weight-lighter"><b>Management Fee</b></h6></div>
-                <div class="col border-right border-dark"></div>
-                <div class="col border-right border-dark"></div>
-                <div class="col"></div>
+              <div class="row land">
+                <div class="col border-right border-dark"><h5 class="black-text p-3 font-weight-lighter border-dark border-bottom"><b>Management Fee</b></h5>
+                  <img src="images/money.png" alt="" height="100" width="120"> <br>
+                  <P class="green darken-4 white-text p-2">The management fee is charged on all monies collected on your behalf. Management fees cover the day to day running of the property, tenant and landlord, arranging maintenance, site visits and collecting and processing rental payments</P>
+                </div>
+                <div class="col border-right border-dark"><h5 class="white-text p-3 font-weight-lighter grey darken-4"><b>Routine Inspections</b></h5>
+                  <img src="images/lens.png" alt="" height="80" width="90">
+                  <p>Inspections are carried out every three months and a report of inspection is forwarded to the landlord. Ugent maintenance issues will be reported to you immediately and seek your advice on the necessary action to take</p>
+                </div>
+                <div class="col border-right border-dark">
+                  <h5 class="black-text p-3 font-weight-lighter border-dark border-bottom"><b>Maintenance and Repairs</b></h5>
+                  <img src="images/repair.png" alt="" height="80" width="90"> <br>
+                  <p class="green darken-4 white-text p-2">We readily have seasoned technics to carry out all necessary repairs and maintenance as the need shall arise. Costs for such repairs or maintenance shall be computed into the management fee</p>
+                </div>
+                <div class="col">
+                  <h5 class="white-text p-3 font-weight-lighter grey darken-4"><b>Water and Electricity Arrears</b></h5>
+                  <img src="images/water.png" alt="" height="80" width="90">
+                  <p>Such fees shall fall to the tenant. The company shall however be responsible for sewers ( with the guidance of the landlord) depending on the estate in question.</p>
+                </div>
               </div>
-              <div class="row land p-3">
-                <div class="col border-right border-dark"></div>
-                <div class="col border-right border-dark"></div>
-                <div class="col border-right border-dark"></div>
-                <div class="col"></div>
+              <div class="row land">
+                <div class="col border-right border-dark"><h5 class="white-text p-3 font-weight-lighter grey darken-4"><b>Accounts</b></h5>
+                  <img src="images/calc.png" alt="" height="100" width="120">
+                  <P>At the client's request, we can pay for all your accounts including investment property, council rates, water rates, maintenance etc. Copies of receipts are sent to the landlord with the end of the month statement</P>
+                </div>
+                <div class="col border-right border-dark"><h5 class="black-text p-3 font-weight-lighter border-dark border-bottom"><b>End of the month statements</b></h5>
+                  <img src="images/statement.png" alt="" height="80" width="90"> <br>
+                  <p class="green darken-4 white-text p-2">At the end of the month, a <a href="#eoms"><button 
+                    class="black-text" onclick="document.getElementById('eoms').style.display='block'">statement</button> </a> shall be issued to the lamdlord with details on the following:</p>
+                  <dl class="white-text green darken-4 p-2">
+                    <li>Rental fees collected</li>
+                    <li>All outgoings (rates and maintenance)</li>
+                    <li>Management fees</li>
+                    <li>Monies forwarded to the bank</li>
+                  </dl> 
+                  <div class="eom p-2" id="eoms"> <span onclick="document.getElementById('oems').style.display='none'" class="close">&times;</span> A detailed end of the month, a statement capturing all </div>
+                </div>
+                <div class="col border-right border-dark">
+                  <h5 class="white-text p-3 font-weight-lighter grey darken-4"><b>Tenant education</b></h5>
+                  <img src="images/education.png" alt="" height="80" width="90">
+                  <p>This is a crucial part of management of the property. The education is aimed at equiping the tenant with the skills and knowledge on how to maintain amenities, ensure that less is spent on maintenance and repairs. We therefore educate tenants on various relevant issues including: relighting a hot water system, operating air conditioning systems, operating the stoves and how to cut costs including electricity and water rates.</p>
+                </div>
+                <div class="col">
+                  <h5 class="black-text p-3 font-weight-lighter border-dark border-bottom"><b>Security and Hygiene</b></h5>
+                  <img src="images/security.png" alt="" height="80" width="90"> <br>
+                  <p class="green darken-4 white-text p-2">We provide the option of 24 hour security guards and dedicated Professional cleaners to ensure the smooth and comfortable stay of occupants and the maintenance of the property in highly hygienic standards</p>
+                </div>
               </div>
             </div>
           </div>
