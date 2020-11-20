@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <link rel="icon" href="images/logo.jpg">
   <!--Import bootstrap4.css-->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -31,7 +32,7 @@
       body{
         background: -webkit-linear-gradient(left, rgb(0,0,0), rgba(0,0,0,0.2)), url("images/reserve.png");
         background-size: contain;
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         overflow-x: hidden;
         font-family: 'Work Sans', sans-serif;
       }
@@ -51,14 +52,6 @@
       .nav-link{
         color: white !important;
       }
-      input{
-        color: rgb(66, 6, 51) !important;
-        font-weight: bold !important;
-        background-color: rgba(14, 36, 19, 0.541) !important;
-        border-radius: 30px !important;
-        padding-left: 20px !important;
-        border-bottom: hidden !important;
-      }
       .active{
         padding-bottom: 0px;
         border-bottom: 3px solid white !important;
@@ -77,7 +70,7 @@
         font-size: 14px !important;
       }
       .last{
-        background: -webkit-linear-gradient(top, rgb(0, 0, 0), rgba(0, 0, 0, 0.322)), url("images/painter.jpg");
+        background: -webkit-linear-gradient(top, rgb(12, 22, 12), rgba(0, 0, 0, 0)), url("images/painter.jpg");
         background-size: contain;
       }
       .project{
@@ -86,7 +79,7 @@
         background-repeat: no-repeat;
       }
       .land{
-        background-color: rgba(255, 255, 255, 0.623);
+        background-color: rgba(20, 39, 25, 0.623);
       }
       .prop{
         display: none;
@@ -97,13 +90,13 @@
       .greene{
         background-color: rgb(10, 31, 10);
       }
-      .close{
+      .closes{
         float: right;
         font-size: 40px;
         color: rgb(2, 54, 2);
         transition: 250ms;
       }
-      .close:hover{
+      .closes:hover{
         color: red;
         transform: scale(1.2);
         cursor: pointer;
@@ -122,20 +115,38 @@
         font-size: 13px !important;
       }
       #change{
-        animation: mymove 0.8s forwards;
-        background-size: contain;
+        animation: mymove 3s forwards;
+        animation-delay: 0.5s;
+      }
+      #wow{
+        animation: mymoves 3s forwards;
+        animation-delay: 2s;
       }
       @keyframes mymove {
-        from {background-image: url("images/garden.jpg"); }
-        to {background-image: url("images/reserve.png"); }
+        from {left: 0px;}
+        to {left: 200px;}
+      }
+      @keyframes mymoves {
+        0% {background-color: rgb(10, 31, 10); }
+        100% { background-color: rgba(10, 31, 10, 0);}
       }
       .gree{
         color: rgb(10, 31, 10);
       }
+      img{
+        border-radius: 5px;
+      }
+      .first{
+        z-index: 1;
+        position: fixed;
+      }
+      .blos{
+        background: -webkit-linear-gradient(left, white, rgb(8, 20, 8), rgb(8, 20, 8));
+      }
     </style>
   <body>
         <div>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light pl-0 greene hidden-md">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light pl-0 hidden-md">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -145,7 +156,7 @@
                   <img src="images/logo.jpg" width="70" height="60" alt="Greene" class="mb-1"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><p class=" black-text">Land and Property</p></a>
+                <a class="nav-link" href="#land"><p class=" black-text">Land and Property</p></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"><p class=" black-text">Designs</p></a>
@@ -154,7 +165,7 @@
                 <a class="nav-link" href="#"><p class=" black-text">Events</p></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="team.html"><p class=" black-text">The Greene Team</p></a>
+                <a class="nav-link" href="team.html"><p class=" black-text">The <span class=" gree font-weight-bolder">Greene</span> Team</p></a>
               </li>
             </ul>
             <form class="form-inline offset-lg-3" action="index.html" method="post" style="width: 25rem;">
@@ -167,13 +178,13 @@
             </form>
           </nav>
         </div>
-        <div class="greene d-sm-none center-align d-md-block hide-on-med-and-down">
+        <div class="greene d-sm-none center-align d-md-block hide-on-med-and-down" role="navigation">
           <ul class="nav justify-content-center nav-fill">
             <li class="nav-item">
-              <a class="nav-link" href="#">Land</a>
+              <a class="nav-link" href="#">Land & Plots</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link border-left" href="#">Plots</a>
+              <a class="nav-link border-left" href="#paint">Construction and site</a>
             </li>
             <li class="nav-item">
               <a class="nav-link border-left" href="#">Houses</a>
@@ -187,53 +198,156 @@
           </ul>
         </div>
         <div class="mt-5 next pb-5 center-align">
-          <div class="card w-20 float-lg-right mt-lg-0 hide-on-med-and-down mr-2 grey lighten-3">
+          <div class="card w-20 float-lg-right mt-lg-0 hide-on-med-and-down mr-2" id="start">
             <div class="card-body">
-              <h6 class="card-title">My <span class="green-text text-darken-4 font-weight-bolder">Greene</span></h6>
+              <h6 class="card-title">My <span class=" font-weight-bolder center-align">Greene</span></h6>
               <img src="images/logo.jpg" width="80" height="60" alt="Greene" class="mb-1 border profile"></a> <p>Profile</p>
-              <a href="#" class="btn greene">Login</a> <a href="#" class="btn pink darken-4">Logout</a>
-              <p class="text-wrap" style="width: 10rem;">Don't have an account? SignUp or Register!</p><a href="#" class="btn black darken-4" id="up">Signup</a>
+              <a href="#" class="btn rounded-pill pink darken-4">Login</a> <a href="#" class="btn greene rounded-pill">Logout</a>
+              <p class="text-wrap" style="width: 10rem;">Don't have an account? SignUp or Register!</p><a href="#" class="btn white black-text rounded-pill" id="up" data-toggle="modal" data-target="#myModal">Signup</a>
             </div>
           </div>
-          <h3 class="display-3 mt-10 ml-5 pt-lg-5 white-text text-wrap" style="width: 6rem;"><span class="font-weight-bold greene p-2">Greene</span> Reservoir Management</h3>
-          <div class="row justify-content-center"><p class="white-text">The company slogan here...how far you'll go...</p></div>
+          <!-- Modal -->
+          <div id="myModal" class="modal fade center-align m-5 w-75 p-5 h-100">
+            <div class=" modal-content p-5">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <!-- Modal content-->
+                <div class="w-100 h-100 p-2">
+                  <h4 class=" p-3 shadow-lg greene white-text w-75">My Greene Account</h4>
+                  <div class="row px-3 white">
+                    <div class="col">
+                      <img src="images/security.png" alt="" height="70" width="70">
+                      <p><h6 class=" pink-text text-darken-4 font-weight-bold">CREATE AN ACCOUNT</h6> and get our optimized services and better performance.Feel free to fill in the details below. All information provided is confidential.</p>
+                    </div>
+                    <div class="col">
+                      <p class=" p-5 grey lighten-5 shadow-lg">Upon account creation you are free to view your profile at any time of your convinience, our services run 24/7. Thank you for visiting <b>Greene Reservoir Management.</b> For more information please contact the greene team below. </p>
+                    </div>
+                  </div>
+                  <div class="p-3 w-100 shadow-lg">
+                    <form class="p-5 grey lighten-5 needs-validation" novalidate>
+                     <h4 class="gree">SignUp</h4>
+                     <div class="form-row">
+                       <div class="form-group col-md-6">
+                         <label for="firstname">FirstName</label>
+                         <input type="text" class="form-control" id="firstname" required>
+                         <div class="invalid-feedback">
+                           We would love to know you
+                         </div>
+                       </div>
+                       <div class="form-group col-md-6">
+                         <label for="lastname">LastName</label>
+                         <input type="text" class="form-control" id="lastname" required>
+                         <div class="invalid-feedback">
+                           Everyone has a lastname
+                         </div>
+                       </div>
+                     </div>
+                     <div class="form-row">
+                       <div class="form-group col-md-6">
+                         <label for="inputEmail4">Email</label>
+                         <input type="email" class="form-control" id="inputEmail4" aria-describedby="emailHelp" required>
+                         <div class="invalid-feedback">
+                           Emails require an @+domainname+.com respectively
+                         </div>
+                       </div>
+                       <div class="form-group col-md-6">
+                         <label for="inputPassword4">Password</label>
+                         <div class="row">
+                           <div class="col-lg-8">
+                            <input type="password" class="form-control" id="inputPassword4" required >
+                          </div>
+                            <div class="col-lg-4">
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">show</label>
+                              </div>
+                            </div>
+                         </div>
+                         <div class="invalid-feedback">
+                           Password must be btn 6-8 aplhanumeric characters and contain at least a symbol.
+                         </div>
+                       </div>
+                     </div>
+                     <div class="form-group">
+                       <label for="phonenumber">Phonenumber</label>
+                       <input type="text" class="form-control" id="phonenumber" placeholder="0772971878" required>
+                       <div class="invalid-feedback">
+                         phone numbers are 10 digits precicely.
+                       </div>
+                     </div>
+                     <div class="form-group">
+                       <div class="form-group">
+                         <label for="FormControlFile1">Upload a profile photo here (optional)</label>
+                         <input type="file" class="form-control-file" id="FormControlFile1">
+                       </div>
+                     </div>
+                     <div class="form-row">
+                       <div class="form-group col-md-6">
+                         <label for="inputCity">City</label>
+                         <input type="text" class="form-control" id="inputCity" placeholder="kisasi" required>
+                         <div class="invalid-feedback">
+                           Your location helps us connect with you better.
+                         </div>
+                       </div>
+                       <div class="form-group col-md-6">
+                         <label for="inputState">State</label>
+                         <select id="inputState" class="form-control" required>
+                           <option selected>Kampala</option>
+                           <option>Mukono</option>
+                           <option>wakiso</option>
+                         </select>
+                       </div>
+                     </div>
+                     <div class="form-group form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Remember me
+                      </label>
+                    </div>
+                     <button type="submit" class="btn greene">SignUp</button>
+                   </form> 
+                 </div> 
+                </div>
+            </div>
+          </div>
+          <h3 class="display-3 mt-10 ml-5 pt-lg-5 white-text text-wrap" style="width: 6rem;"><span class="font-weight-bold greene p-2 rounded-pill" id="wow">Greene</span> Reservoir Management</h3>
+          <div class="row position-relative" id="change"><p class="white-text">" Innovative, Convenient and Natural "</p></div>
         </div>
-        <div class="m-0 next">
+        <div class="m-0 grey lighten-2" id="land">
           <div class="row mb-0">
-            <div class="row white w-100 px-5">
-              <div class="col-lg-6 col-sm-4">
+            <div class="row white-text blos w-100 px-5">
+              <div class="col-lg-4 col-sm-4 grey lighten-3">
                 <h4 class=" p-2 font-weight-bold border-right border-dark grey-text text-darken-1">Lands & Property</h4>
               </div>
               <div class="col-lg-2 col-sm-4 p-2"><a href="#property"><button onclick="document.getElementById('property').style.display='block'" class="border-0 transparent">
-                <h6>Property <br> Management</h6></button></a>
+                <h6 class=" white-text">Property <br> Management</h6></button></a>
               </div>
               <div class="col-lg-2 col-sm-4 p-2"><a href="">
-                <h6 class=" black-text border-left border-dark px-5">Land Leasing</h6></a>
+                <h6 class=" white-text border-left border-dark px-5">Land Leasing</h6></a>
               </div>
               <div class="col-lg-2 col-sm-4 p-2"><a href="">
-                <h6 class=" black-text border-left border-dark px-5">Land Registration Services</h6></a>
+                <h6 class=" white-text border-left border-dark px-5">Land Registration Services</h6></a>
               </div>
             </div>
-            <div class="row land p-5 center-align">
-              <div class="col-4 white"><img src="images/logo.jpg" alt="" width="60" height="60">
-                <h5 class="font-weight-bold">Land or Property?</h5>
+            <div class="row shadow-lg px-5 pt-5 center-align rounded-lg">
+              <div class="col-4 white pt-5">
+                <h6 class="font-weight-bold">Land or Property?</h6>
                 <p class=" p-2">Start your quick search here. Would you like land or property?</p>
-                <button class="white-text greene btn border-0 px-4"><p>Land</p></button><button class="pink darken-4 white-text btn ml-2 border-0 px-4"><p>Property</p></button>
+                <button class="white btn px-5 shadow-none border-bottom border-dark"><p><a href="" class=" border-right px-4 border-dark">Land</a> <a href="" class=" pl-2">Property</a></p></button>
                 <p></p> <a href="lands.html"> <u>
                   Our best Land profiles. View more Lands and properties.</u></a>
-                  <b>Verified by: </b>
+                  <p>Verified by: </p>
                 </p>
-                <img src="images/ursb.jpg" alt="" height="40" width=60>
+                <img src="images/logo.jpg" alt="" width="60" height="60" class="border border-dark circle">
               </div>
-              <div class="col-8">
+              <div class="col-8 white p-3">
                 <h5><b>Properties</b></h5>
-                <img src="images/prop2.jpg" width="200" height="150"> <img src="images/nice.jpg" width="200" height="150">
+                <button class=" btn-floating circle shadow-lg float-lg-left">why</button>
+                <img src="images/prop2.jpg" width="260" height="150"> <img src="images/nice.jpg" width="260" height="150">
                 <div class="row pt-2">
                   <div class="col">
-                    <h6> <img src="images/houses.png" height="20" width="20" alt=""><b> The Mercado casagrande</b></h6>
-                    <ul class="left-align ml-5">
+                    <h6>The Mercado casagrande</h6>
+                    <ul class="left-align ml-5 white rounded-lg p-2 ml-3">
                       <li> <img src="images/location.png" height="30" width="30" alt=""> Kisasi</li>
-                      <li class="border-top border-bottom black-text"> <b>2</b> Acres</li>
+                      <li class="border-top border-bottom">Size: <b>2</b> Acres</li>
                       <li class="p-1">Rating:<img src="images/star.png" height="20" width="20" alt="">
                         <img src="images/verified.png" height="20" width="20" alt="">
                         <img src="images/verify.png" height="20" width="20" alt="">
@@ -242,10 +356,10 @@
                     </ul>
                   </div>
                   <div class="col"> 
-                    <h6><img src="images/houses.png" height="20" width="20" alt=""> <b>Boniface Properties</b></h6>
-                    <ul class=" left-align ml-5">
+                    <h6 class=" left-align">Boniface Properties</h6>
+                    <ul class=" left-align white rounded-lg p-2 ml-3">
                       <li><img src="images/location.png" height="30" width="30" alt=""> Mutungo</li>
-                      <li class="border-top border-bottom black-text"> <b>5</b> Acres</li>
+                      <li class="border-top border-bottom">Size: <b>5</b> Acres</li>
                       <li class="p-1">Rating:<img src="images/star.png" height="20" width="20" alt="">
                         <img src="images/verified.png" height="20" width="20" alt="">
                         <img src="images/verify.png" height="20" width="20" alt="">
@@ -256,11 +370,11 @@
                 </div>
               </div>
             </div>
-            <div class="row p-5 grey lighten-3 prop" id="property">
-              <span onclick="document.getElementById('property').style.display='none'" class="close">&times;</span>
+            <div class="row p-5 greene prop" id="property">
+              <span onclick="document.getElementById('property').style.display='none'" class="closes">&times;</span>
               <div class="row justify-content-lg-center">
-                <h4 class="p-3">Property Management</h4></div>
-              <div class="row p-5 white">
+                <h4 class="p-3 shadow-lg white-text">Property Management</h4></div>
+              <div class="row p-5 white shadow-lg">
                 <div class="col">
                   <div class="row">
                     <div class="col"><img src="images/market.png" height="150" width="250"></div>
@@ -278,15 +392,15 @@
                 </div>
                 <div class="col center-align">
                   <h4 class="white-text greene p-3 font-weight-lighter">On-going Management</h4>
-                  <img src="images/body.jpg" alt="" height="350" width="500" class=" center-align">
+                  <img src="images/house.jpg" alt="" height="300" width="400" class=" center-align">
                 </div>
               </div>
-              <div class="row land px-5 py-1">
+              <div class="row shadow-lg px-5 white ">
                 <div class="col"><h6 class="black-text p-3 font-weight-lighter border-dark border-bottom"><b>Management Fee</b></h6>
                   <img src="images/money.png" alt="" height="100" width="120"> <br>
                   <P class="p-2">The management fee is charged on all monies collected on your behalf. Management fees cover the day to day running of the property, tenant and landlord, arranging maintenance, site visits and collecting and processing rental payments</P>
                 </div>
-                <div class="col grey lighten-2"><h6 class="p-3 greene white-text"><b>Routine Inspections</b></h6>
+                <div class="col grey lighten-2 rounded-lg"><h6 class="p-3 greene white-text"><b>Routine Inspections</b></h6>
                   <img src="images/lens.png" alt="" height="80" width="90">
                   <p>Inspections are carried out every three months and a report of inspection is forwarded to the landlord. Ugent maintenance issues will be reported to you immediately and seek your advice on the necessary action to take</p>
                 </div>
@@ -295,14 +409,14 @@
                   <img src="images/repair.png" alt="" height="80" width="90"> <br>
                   <p class="p-2">We readily have seasoned technics to carry out all necessary repairs and maintenance as the need shall arise. Costs for such repairs or maintenance shall be computed into the management fee</p>
                 </div>
-                <div class="col grey lighten-2">
+                <div class="col grey lighten-2 rounded-lg">
                   <h6 class="p-3 greene white-text"><b>Water and Electricity Arrears</b></h6>
                   <div><img src="images/water.png" alt="" height="80" width="90"></div>
                   <p>Such fees shall fall to the tenant. The company shall however be responsible for sewers ( with the guidance of the landlord) depending on the estate in question.</p>
                 </div>
               </div>
-              <div class="row land px-5 py-1">
-                <div class="col grey lighten-2"><h6 class="white-text p-3 font-weight-lighter greene"><b>Accounts</b></h6>
+              <div class="row shadow-lg px-5 white">
+                <div class="col grey lighten-2 rounded-lg"><h6 class="white-text p-3 font-weight-lighter greene"><b>Accounts</b></h6>
                   <img src="images/calc.png" alt="" height="100" width="120">
                   <P>At the client's request, we can pay for all your accounts including investment property, council rates, water rates, maintenance etc. Copies of receipts are sent to the landlord with the end of the month statement</P>
                 </div>
@@ -318,7 +432,7 @@
                   </dl> 
                   <div class="eom p-2" id="eoms"> <span onclick="document.getElementById('oems').style.display='none'" class="close">&times;</span> A detailed end of the month, a statement capturing all </div>
                 </div>
-                <div class="col grey lighten-2">
+                <div class="col grey lighten-2 rounded-lg">
                   <h6 class="white-text p-3 font-weight-lighter greene"><b>Tenant education</b></h6>
                   <img src="images/education.png" alt="" height="80" width="90">
                   <p>This is a crucial part of management of the property. The education is aimed at equiping the tenant with the skills and knowledge on how to maintain amenities, ensure that less is spent on maintenance and repairs. We therefore educate tenants on various relevant issues including: relighting a hot water system, operating air conditioning systems, operating the stoves and how to cut costs including electricity and water rates.</p>
@@ -333,36 +447,36 @@
           </div>
         </div>
 
-        <div class="paint p-5">
+        <div class="paint p-5" id="paint">
           <div class="row black-text p-2 mb-0 center-align">
             <div class="row">
               <div class="col-lg-4">
                 <img src="images/live.jfif" alt="" height="200" width="300"></div>
                 <div class="col-lg-8"></h4>
-                  <h4 class=" border-left border-dark font-weight-bold grey-text text-darken-2"> <img src="images/icon1.png" height="60" width="50" alt=""> CONSTRUCTION & Site Management <br><span class="font-weight-light px-5 black-text"> Project Management</span>
+                  <h4 class=" border-left border-dark font-weight-bold grey-text text-darken-2"> <img src="images/icon1.png" height="60" width="50" alt=""> CONSTRUCTION & Site Management <br><span class="font-weight-light px-5 white-text greene py-1 rounded-lg"> Project Management</span>
                   <img src="images/tractor.png" alt="" height="50" width="70"></h4></div>
             </div>
             <div class="col-lg-6 col-sm-12 white-text">
             </div>
-            <div class="row justify-content-lg-center">
-              <div class="col-lg-7 grey lighten-2 p-5">
+            <div class="row justify-content-lg-center shadow-lg p-2">
+              <div class="col-lg-9 white p-5">
                 <h5 class=" font-weight-light border-bottom border-dark p-2">Project Management</h5>
                 <p>Green estate will ensure all your project management solutions.</p>
-                <div class="row white p-lg-2">
-                  <div class="col"> <img src="images/case.png" alt="" height="50" width="50">  Time and budget plans</div>
-                  <div class="col"><img src="images/risk.png" alt="" height="50" width="50">  Delays and risk management</div>
-                  <div class="col"><img src="images/health.png" alt="" height="50" width="50">  Quality control and Health risk Management</div>
-                  <div class="col"><img src="images/inspect.png" alt="" height="50" width="50">  Quality inspections</div>
+                <div class="row white-text greene p-lg-2 rounded-lg px-2">
+                  <div class="col"> <img src="images/case.png" alt="" height="50" width="50"> <br> Time and budget plans</div>
+                  <div class="col"><img src="images/risk.png" alt="" height="50" width="50"> <br> Delays and risk management</div>
+                  <div class="col"><img src="images/health.png" alt="" height="50" width="50"> <br> Quality control and Health risk Management</div>
+                  <div class="col"><img src="images/inspect.png" alt="" height="50" width="50"> <br> Quality inspections</div>
                 </div>
                 <button class="btn greene white-text"><img src="images/drill.png" alt="" height="30" width="40">Apply here</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="last lighten-3 p-5">
-          <h4 class="font-weight-bold p-4 mt-0 mb-0 white-text">Electrical installations, <br><b>Plumbing</b> and <br> Painting</h4>
-          <div class="row px-5 land py-3 mb-0">
-            <div class="col p-5 white">
+        <div class="grey lighten-3 p-5">
+          <h4 class="font-weight-bold p-4 mt-0 mb-0 center-align">Electrical installations, <b>Plumbing</b> and <br> Painting</h4>
+          <div class="row p-5 mb-0 shadow-lg">
+            <div class="col p-5">
               <img src="images/tool.png" height="70" width="80" alt="">
               <h6 class="black-text border-right border-dark">We draft <br> Electrical and <br> Plumbing outlines.</h6>
               <img src="images/kara.jfif" alt="">
@@ -379,12 +493,37 @@
             </div>
           </div>
         </div>
-      <div class="pt-5 pb-5 grey darken-4 white-text">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-sm-12 grey darken-4">
-            <h6 class=" display-4 grey-text text-darken-2 text-mute">Greene Reservoir Management</h6>
+        <div class="grey lighten-5 gree m-0 p-5">
+          <div class="row shadow-lg grey lighten-5">
+            <div class="col-lg-5 pl-4 pt-lg-5 center-align grey lighten-3">
+              <img src="images/logo.jpg" alt="" height="100" width="100" class="circle">
+              <h4 class=" font-weight-bold px-5 py-3 shadow-lg grey lighten-3"> Greene Property <br> Management System</h4>
+            </div>
+            <div class="col-lg-7 float-lg-right">
+              <iframe src="https://giphy.com/embed/26ufhc6irF9vEyoKI" width="500" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://media.giphy.com/media/26ufhc6irF9vEyoKI/giphy.gif"></a></p>
+            </div>
+            <div class="row px-5">
+              <div class="col-lg-4 shadow-lg p-5 grey lighten-4">
+                <p>The <b>Company</b> is a <span class=" pink-text text-darken-4">pioneer</span> in the employment of technology tools in the direct management of client's properties. The <b>Greene</b> Property Management system is a centralized computer system that is used to organize, schedule and perform day to day functions and transactions involved in the property management business. The system stores rceords of listed properties and monitors events.</p>
+                <img src="images/logo.jpg" alt="" height="80" width="90">
+                <img src="images/digital.png" alt="" height="60" width="90">
+                <img src="images/digital.jfif" alt="" height="80" width="90">
+              </div>
+              <div class="col-lg-5 pt-5">
+                <img src="images/estate.jpg" alt="" height="280" width="450">
+              </div>
+              <div class="col-lg-3 shadow-lg p-5 grey lighten-3">
+                <p>The system stores records of listed properties and monitors rent collection from them. it also issues instant notifications of payments made and other important correspondances to clients.</p>
+                <p>The system ensures timely execution of our mandate, guarantees transparency and also proper record keeping which helps management to arrive at accurate decisions in regards to our listed properties.</p>
+              </div>
+            </div>
           </div>
+        </div>
+      <div class="pt-5 pb-5 grey darken-4 grey-text center-align m-0">
+        <div class="row justify-content-lg-center">
+          <h6 class=" display-4 grey-text text-darken-2">Greene Estates and Property Management</h6>
+        </div>
+        <div class="row browser-default px-5 container-lg">
           <div class="col-lg-6 col-sm-12 text-center">
             <h6>Contact Us</h6>
             <p>Administrative reach</p>
@@ -392,33 +531,44 @@
             <p>Main Office</p>
             <p> <a href="mailto:hr@2gofinancialservices.com">Email: Main Office</a> | <a href="tel:+256772971878">Tel: Main Office</a> </p>
           </div>
+          <div class="col-lg-6 col-sm-12 text-center px-5">
+            <h6>Quick Links & </h6><a href="team.html" class="white-text"><h6><u>FAQs</u></h6></a>
+            <a href="#paint">construction site management</a> <a href="#land">Comprehensive land registration</a> <a href="#land">Land title processing</a>
+            <a href="#">Interior and exterior Designs</a> <a href="#">Plans</a> <a href="#land">Land leasing</a>
+            <p>Send a query, comment, suggestion here below...</p>
+            <a href="team.html#faqs">
+              <button type="button" name="button" class="btn pink darken-4 rounded-pill">Get started</button>
+            </a>
+          </div>
         </div>
-        <div class="container">
+        <div class="container border-top border-dark border-bottom">
           <div class="row">
             <div class="col">
-              <div class="p-2 border-bottom">
+              <div class="p-2">
                 <h6>Social Media Links</h6>
                 <a href="https://www.facebook.com"> <img src="images/facebook.png" alt="" height="30" width="30"></a>
                 <a href="tel:+256772971878"><img src="images/whatsapp.png" alt="" height="30" width="30"></a>
                 <a href="mailto:hr@2gofinancialservices.com"><img src="images/google.png" alt="" height="30" width="30"></a>
                 <a href="https://www.twitter.com"><img src="images/twiter.png" alt="" height="30" width="30"></a>
               </div>
+            </div>
+            <div class="col">
               <h6>Location</h6>
-              <p class="grey-text text-darken-2">Find us at 72 street, Ovacado Lane, Bushwell Dr. Alaska</p>
-            </div>
-            <div class="col border-top pb-2">
-              <h6>Quick Links & </h6><a href="" class="white-text"><h6><u>FAQs</u></h6></a>
-              <a href="#">construction site management</a> <a href="#">Comprehensive land registration</a> <a href="#">Land title processing</a>
-              <a href="#">Interior and exterior Designs</a> <a href="#">Plans</a> <a href="#">Land leasing</a>
-              <p>Send a query, comment, suggestion here below...</p>
-              <a href="team.html">
-                <button type="button" name="button" class="btn grey darken-4">Get started</button>
-              </a>
-            </div>
+              <p class="grey-text text-darken-2">Find us at 72 street, Ovacado Lane, Bushwell Dr. Alaska</p></div>
           </div>
         </div>
-        <p class="text-center border-top pt-3 grey-text text-darken-2 border-light">&copy;2020.copyright by Greene Reservoir Management.</p>
+        <p class="text-center pt-3 grey-text text-darken-2 border-light">&copy;2020.copyright by Greene Reservoir Management.</p>
       </div>
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="jquery-3.3.1/dist/jquery.slim.min.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/bootstrap.bundle.min.js" charset="utf-8" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" charset="utf-8" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
     <!-- Optional JavaScript -->
     <script type="text/javascript">
     (function() {
@@ -438,14 +588,15 @@
         });
       }, false);
       })();
+      function myFunction() {
+  var x = document.getElementById("inputPassword4");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
     </script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="jquery-3.3.1/dist/jquery.slim.min.js" charset="utf-8" type="text/javascript"></script>
-    <script src="js/bootstrap.bundle.min.js" charset="utf-8" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" charset="utf-8" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    
   </body>
 </html>

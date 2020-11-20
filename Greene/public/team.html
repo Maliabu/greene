@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
 
 <head>
+  <title>Greene Estates Management</title>
+  <link rel="icon" href="images/logo.jpg">
     <!--Import bootstrap4.css-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -22,353 +24,303 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-
+<style media="screen">
+  html{
+    scroll-behavior: smooth !important;
+  }
+  body{
+    background: -webkit-linear-gradient(left, rgb(0,0,0), rgba(0,0,0,0.2)), url("images/reserve.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    font-family: 'Work Sans', sans-serif;
+  }
+  title{
+    display: inline-block !important;
+  }
+  .new{
+    background-image: url("images/garden.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .paint{
+    background: -webkit-linear-gradient(top, rgb(255, 255, 255), rgba(255, 254, 254, 0)),url("images/vector1.png");
+    background-size: contain;
+  }
+  
+  .back{
+    background-image: url("images/vector2.png");
+  }
+  .nav-link{
+    color: white !important;
+  }
+  .active{
+    padding-bottom: 0px;
+    border-bottom: 3px solid white !important;
+  }
+  .profile{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #212121;
+  }
+  button{
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  .par{
+    font-size: 14px !important;
+  }
+  input{
+    font-size: 14px !important;
+    padding: 0px !important;
+  }
+  .team{
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.644), rgba(255, 255, 255, 0.322)), url("images/logo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .project{
+    background-image: url("images/project.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .prop{
+    display: none;
+  }
+  .eom{
+    display: none;
+  }
+  .greene{
+    background-color: rgb(10, 31, 10);
+  }
+  .close{
+    float: right;
+    font-size: 40px;
+    color: rgb(2, 54, 2);
+    transition: 250ms;
+  }
+  .close:hover{
+    color: red;
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  button{
+    transition: 250ms ease-in;
+  }
+  button:hover{
+    background-color: transparent !important;
+    transform: scale(0.9);
+  }
+  p{
+    font-size: 13px !important;
+  }
+  li{
+    font-size: 13px !important;
+  }
+  #change{
+    animation: mymove 0.8s forwards;
+    background-size: contain;
+  }
+  @keyframes mymove {
+    from {background-image: url("images/garden.jpg"); }
+    to {background-image: url("images/reserve.png"); }
+  }
+  .gree{
+    color: rgb(10, 31, 10);
+  }
+  .tito{
+      clip-path: polygon(0 0, 93% 0, 100% 33%, 100% 100%, 8% 100%, 0 67%);
+  }
+  .dl{
+      border-radius: 0 0 0 40px;
+  }
+  #more:hover{
+    animation: mores 0.5s forwards;
+  }
+  #more:hover::after{
+    animation: mores 0.5s forwards;
+    animation: phil 0.5s forwards;
+    content: "joy";
+    color: rgb(255, 255, 255) !important;
+  }
+  @keyframes mores{
+    0% { background-color: transparent; content: normal;}
+    100% {background-color: aliceblue; color: rgb(255, 255, 255);}
+  }
+  @keyframes phil{
+    100% { color: rgb(0, 0, 0);}
+  }
+</style>
 <body>
-    <style media="screen">
-        html{
-          scroll-behavior: smooth !important;
-        }
-        body{
-          background: -webkit-linear-gradient(left, rgb(0,0,0), rgba(0,0,0,0.2)), url("images/reserve.png");
-          background-size: contain;
-          background-repeat: no-repeat;
-          overflow-x: hidden;
-          font-family: 'Work Sans', sans-serif;
-        }
-        .new{
-          background-image: url("images/garden.jpg");
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-        .paint{
-          background: -webkit-linear-gradient(top, rgb(255, 255, 255), rgba(255, 254, 254, 0)),url("images/vector1.png");
-          background-size: contain;
-        }
-        
-        .back{
-          background-image: url("images/vector2.png");
-        }
-        .nav-link{
-          color: white !important;
-        }
-        .active{
-          padding-bottom: 0px;
-          border-bottom: 3px solid white !important;
-        }
-        .profile{
-          width: 50px;
-          height: 50px;
-          border-radius: 50px;
-          border: 1px solid #212121;
-        }
-        button{
-          border: 1px solid white;
-          border-radius: 5px;
-        }
-        .par{
-          font-size: 14px !important;
-        }
-        .team{
-          background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.644), rgba(255, 255, 255, 0.322)), url("images/logo.jpg");
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-        .project{
-          background-image: url("images/project.jpg");
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-        .land{
-          background-color: rgba(255, 255, 255, 0.623);
-        }
-        .prop{
-          display: none;
-        }
-        .eom{
-          display: none;
-        }
-        .greene{
-          background-color: rgb(10, 31, 10);
-        }
-        .close{
-          float: right;
-          font-size: 40px;
-          color: rgb(2, 54, 2);
-          transition: 250ms;
-        }
-        .close:hover{
-          color: red;
-          transform: scale(1.2);
-          cursor: pointer;
-        }
-        button{
-          transition: 250ms ease-in;
-        }
-        button:hover{
-          background-color: transparent !important;
-          transform: scale(0.9);
-        }
-        p{
-          font-size: 13px !important;
-        }
-        li{
-          font-size: 13px !important;
-        }
-        #change{
-          animation: mymove 0.8s forwards;
-          background-size: contain;
-        }
-        @keyframes mymove {
-          from {background-image: url("images/garden.jpg"); }
-          to {background-image: url("images/reserve.png"); }
-        }
-        .gree{
-          color: rgb(10, 31, 10);
-        }
-        .tito{
-            clip-path: polygon(0 0, 93% 0, 100% 33%, 100% 100%, 8% 100%, 0 67%);
-        }
-        .dl{
-            border-radius: 0 0 0 40px;
-        }
-    </style>
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light pl-0 greene hidden-md">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="#home">
-                    <img src="images/logo.jpg" width="70" height="60" alt="Greene" class="mb-1"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><p class=" black-text">Land and Property</p></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><p class=" black-text">Designs</p></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><p class=" black-text">Events</p></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="team.html"><p class=" black-text">The Greene Team</p></a>
-                </li>
-              </ul>
-              <form class="form-inline offset-lg-3" action="index.html" method="post" style="width: 25rem;">
-                <div class="row">
-                  <div class="col-lg-10">
-                    <input type="text" name="search" placeholder="search"></div>
-                  <div class="col-lg-2">
-                    <i class="small material-icons pink-text text-darken-4">search</i></div>
-                </div>
-              </form>
-            </nav>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light pl-0 greene hidden-md">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+          <img src="images/logo.jpg" width="70" height="60" alt="Greene" class="mb-1"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><p class=" black-text">Land and Property</p></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><p class=" black-text">Designs</p></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><p class=" black-text">Events</p></a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="team.html"><p class=" black-text">The Greene Team</p></a>
+        </li>
+      </ul>
+      <form class="form-inline offset-lg-3" action="index.html" method="post" style="width: 25rem;">
+        <div class="row">
+          <div class="col-lg-10">
+            <input type="text" name="search" placeholder="search"></div>
+          <div class="col-lg-2">
+            <i class="small material-icons pink-text text-darken-4">search</i></div>
         </div>
-        <div class="greene d-sm-none center-align d-md-block hide-on-med-and-down">
-            <ul class="nav justify-content-center nav-fill">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Land</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link border-left" href="#">Plots</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link border-left" href="#">Houses</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link border-left" href="#">Architectural designs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link border-left" href="#">Compounds and Gardens</a>
-              </li>
-            </ul>
-        </div>
-        <div class="p-5 white">
-            <h3 class="display-4 black-text greene white-text w-50 p-2 center-align mt-1 tito"><img src="images/pin.png" alt="" height="50" width="50" class="mb-5"> The Team</h3>
-            <div class="mt-5 next">
-                <div class="card w-20 float-lg-right mt-lg-0 hide-on-med-and-down mr-2 center-align">
-                    <div class="card-body">
-                        <h5 class="card-title">My <span class="green-text text-darken-4 font-weight-bolder">Greene</span></h5>
-                        <img src="images/logo.jpg" width="80" height="60" alt="Greene" class="mb-1 border profile"></a>
-                        <p>Profile</p>
-                        <a href="#" class="btn greene">Login</a> <a href="#" class="btn pink darken-4">Logout</a>
-                        <p class="text-wrap" style="width: 10rem;">Don't have an account? SignUp or Register!</p><a href="#" class="btn black darken-4">Signup</a>
-                    </div>
-                </div>
-                <h5><b>About Us</b></h5>
-                <div class="row">
-                    <div class="col border-top border-dark border-bottom"><h6 class="border-dark border-bottom p-2"><b>Mission</b></h6><p>Greene Estates and property solutions is a full service real-estate development and management company in Uganda offering resillient and long-term solutions to our clients. Our services aim at understanding, anticipating and ably meeting client's needs in an accurate, timely and cost effective manner. We ensure that prices negotiated are most profitable and fair to all parties. We believe in tean work. Our agents are a group of highly motivated young people, who understand the value of hard work, excellence and trust, working collectively and combining talents to make an impact in their communities.</p>
-                    <p class="gree"><i><b>Our highest aspiration is to make your dream come true</b></i></p></div>
-                    <div class="col land border-left border-dark border-bottom dl p-4"><h6><b>Who we are?</b></h6><p>Greene Estates property solutions was started in 2019 by a group of organised ang young people with a background in law, real estates management and business. <p> Our conviction is that the housing deficit in Uganda can be solved with efficient solutions crafted around technology, professionalism and trustworthy systems.</p></p>
-                    <a href="#faqs"><h5 class=" float-lg-right">FAQs</h5></a>
-                    </div>
-                </div>
-                <h5 class="gree"><b>Meet the team</b></h5>
-                <div class="row land p-lg-5">
-                    <div class="col px-lg-3"><img src="images/body.jpg" alt="" height="300" width="300"></div>
-                    <div class="col px-lg-3"><img src="images/body.jpg" alt="" height="300" width="300"></div>
-                    <div class="col px-lg-3"><img src="images/body.jpg" alt="" height="300" width="300"></div>
-                </div>
-            </div>
-            <div class="mt-5 next">
-                <div class="card w-20 float-lg-right mt-lg-0 hide-on-med-and-down mr-2">
-                    <div class="card-body">
-                        <h5 class="card-title">Comments & <span class="green-text text-darken-4 font-weight-bolder">Queries</span></h5>
-                        <form action="" method="post">
-                            <input type="email" name="email" id="email" placeholder="email">
-                            <input type="text" name="comment" id="comment" placeholder="comment">
-                            <a href="#" class="btn pink darken-4">Submit</a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="pt-5 pb-5 grey darken-4 white-text">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6 col-sm-12 grey darken-4">
-                <h6 class=" display-4 grey-text text-darken-2 text-mute">Greene Reservoir Management</h6>
-              </div>
-              <div class="col-lg-6 col-sm-12 text-center">
-                <h6>Contact Us</h6>
-                <p>Administrative reach</p>
-                <p> <a href="mailto:akizzam@2gofinancialservices.com">Email: Administration</a> | <a href="tel:+256772971878">Tel: Administration</a> </p>
-                <p>Main Office</p>
-                <p> <a href="mailto:hr@2gofinancialservices.com">Email: Main Office</a> | <a href="tel:+256772971878">Tel: Main Office</a> </p>
+      </form>
+    </nav>
+  </div>
+  <div class="greene d-sm-none center-align d-md-block hide-on-med-and-down border-bottom border-dark">
+    <ul class="nav justify-content-center nav-fill">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Land</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link border-left" href="#">Plots</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link border-left" href="#">Houses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link border-left" href="#">Architectural designs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link border-left" href="#">Compounds and Gardens</a>
+      </li>
+    </ul>
+  </div>
+  <div class="white">
+    <div class="row mb-0"> 
+      <div class=" col-lg-5 greene white-text">
+        <div class="row">
+          <div class="col-lg-12">
+            <h5><b>About Us</b></h5>
+            <div class="row">
+              <div class="col border-top border-dark border-bottom"><h6 class="border-dark border-bottom p-2"><b>Mission</b></h6><p>Greene Estates and property solutions is a full service real-estate development and management company in Uganda offering resillient and long-term solutions to our clients. Our services aim at understanding, anticipating and ably meeting client's needs in an accurate, timely and cost effective manner. We ensure that prices negotiated are most profitable and fair to all parties. We believe in tean work. Our agents are a group of highly motivated young people, who understand the value of hard work, excellence and trust, working collectively and combining talents to make an impact in their communities.</p>
+              <p class=" pink-text text-accent-1"><i><b>Our highest aspiration is to make your dream come true</b></i></p></div>
+              <div class="col border-left border-dark border-bottom dl p-4">
+                <h6 class=" font-weight-bold">Vision</h6><p class=" border-bottom border-dark p-2 font-italic">"To offer innovative and efficient services in property management"</p>
+                <h6><b>Who we are?</b></h6><p>Greene Estates property solutions was started in 2019 by a group of organised ang young people with a background in law, real estates management and business. <p> Our conviction is that the housing deficit in Uganda can be solved with efficient solutions crafted around technology, professionalism and trustworthy systems.</p></p>
+                <a href="#faqs"><h5 class=" float-lg-right border border-dark rounded-lg p-2">FAQs</h5></a>
               </div>
             </div>
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <div class="p-2 border-bottom">
-                    <h6>Social Media Links</h6>
-                    <a href="https://www.facebook.com"> <img src="images/facebook.png" alt="" height="30" width="30"></a>
-                    <a href="tel:+256772971878"><img src="images/whatsapp.png" alt="" height="30" width="30"></a>
-                    <a href="mailto:hr@2gofinancialservices.com"><img src="images/google.png" alt="" height="30" width="30"></a>
-                    <a href="https://www.twitter.com"><img src="images/twiter.png" alt="" height="30" width="30"></a>
-                  </div>
-                  <h6>Location</h6>
-                  <p class="grey-text text-darken-2">Find us at 72 street, Ovacado Lane, Bushwell Dr. Alaska</p>
-                </div>
-                <div class="col border-top pb-2">
-                  <h6>Quick Links & </h6><a href="" class="white-text"><h6><u>FAQs</u></h6></a>
-                  <a href="#">construction site management</a> <a href="#">Comprehensive land registration</a> <a href="#">Land title processing</a>
-                  <a href="#">Interior and exterior Designs</a> <a href="#">Plans</a> <a href="#">Land leasing</a>
-                  <p>Send a query, comment, suggestion here below...</p>
-                  <a href="team.html">
-                    <button type="button" name="button" class="btn grey darken-4">Get started</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <p class="text-center border-top pt-3 grey-text text-darken-2 border-light">&copy;2020.copyright by Greene Reservoir Management.</p>
           </div>
-        <!-- Optional JavaScript -->
-        <script type="text/javascript">
-            (function() {
-                'use strict';
-                window.addEventListener('load', function() {
-                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                    var forms = document.getElementsByClassName('needs-validation');
-                    // Loop over them and prevent submission
-                    var validation = Array.prototype.filter.call(forms, function(form) {
-                        form.addEventListener('submit', function(event) {
-                            if (form.checkValidity() === false) {
-                                event.preventDefault();
-                                event.stopPropagation();
-                            }
-                            form.classList.add('was-validated');
-                        }, false);
-                    });
-                }, false);
-            })();
-        </script>
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="jquery-3.3.1/dist/jquery.slim.min.js" charset="utf-8" type="text/javascript"></script>
-        <script src="js/bootstrap.bundle.min.js" charset="utf-8" type="text/javascript"></script>
-        <script src="js/bootstrap.min.js" charset="utf-8" type="text/javascript"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+        </div>
+      </div>
+      <div class="col-lg-7 grey lighten-2 pt-5 ">
+        <h4 class="p-2 center-align mt-1"><img src="images/pin.png" alt="" height="30" width="30" class="mb-3"> <b>Greene</b> Management Team</h4>
+        <div class="row grey lighten-3">
+          <div class="row pt-3 center-align">
+            <div class="col-lg-4 mt-5" id="more"><p class=" font-weight-bold">Managing Director</p><img src="images/1.png" alt="" height="180" width="220"><h6>Anhem Tiberius</h6><a><i class="material-icons">email</i><i class="material-icons">phone</i></a></div>
+            <div class="col-lg-4 pl-lg-0 shadow py-5"><p class=" font-weight-bold">General Manager</p><img src="images/2.png" alt="" height="200" width="250"><h6>Jackie Lyn</h6><a><i class="material-icons">email</i><i class="material-icons">phone</i></a></div>
+            <div class="col-lg-4 mt-5"><p class=" font-weight-bold">Executive Director</p><img src="images/3.png" alt="" height="150" width="200"><h6>Modeck Priscilla</h6><a><i class="material-icons">email</i><i class="material-icons">phone</i></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-5">
+          <div class="col-lg-7">
+            <h4 class=" center-align font-weight-bold" id="faqs">Comments and Queries</h4>
+            <p><b>Frequently asked questions</b></p>
+            <p class=" pink-text text-darken-4"><b>QN: Why should we trust Greene Estates and Property Management?</b> </p>
+            <p class=" gree"><b>Ans: Greene Estates and Property Solutions is a duly registered company limited by shares and therefore is a legal person that can be sued in its own name. It is also duly licensed by the <a href="https://www.kcca.go.ug/"><img src="images/kcca.png" alt="" height="30" width="30">Kampala Capital City Authority(KCCA)</a> to set up physical offices in Kampala(CBD) where its current offices are located.</b> </p>
+            <form action="" method="post" class=" grey lighten-3 rounded-lg px-5 py-2">
+              <input type="email" name="email" id="email" placeholder="email">
+              <input type="text" name="comment" id="comment" placeholder="comment or ask">
+              <button class="btn greene shadow-none">Submit</button>
+            </form>
+          </div>
+          <div class="col-lg-5 grey lighten-3 p-5">
+            <p><b>Frequently asked questions</b></p>
+            <p class=" pink-text text-darken-4"><b>QN: Can I access the services of the company in any part of the country?</b> </p>
+            <p class=" gree"><b>Ans: Yes, our agents reach all parts of Uganda delivering the same high quality services which our clients are accustomed to. We have a global reach through social media and other Internet platforms like <a href="https://zoom.us/"><img src="images/zoom.jpg" alt="" height="30" width="40"></a></b> </p>
+            <div>
+              <p class=" pink-text text-darken-4"><b>QN: Do you keep my information?</b> </p>
+              <p class=" gree"><b>Ans: We consider and treat our client's information as confidential whether on request or not. This is a part of our way of exhibiting professionalism and intelligence in the property management, Real Estate Business </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" p-5 grey darken-4 white-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 grey darken-4">
+          <h6 class=" display-4 grey-text text-darken-2 text-mute">Greene Reservoir Management</h6>
+        </div>
+        <div class="col-lg-6 col-sm-12 text-center">
+          <h6>Contact Us</h6>
+          <p>Administrative reach</p>
+          <p> <a href="mailto:akizzam@2gofinancialservices.com">Email: Administration</a> | <a href="tel:+256772971878">Tel: Administration</a> </p>
+          <p>Main Office</p>
+          <p> <a href="mailto:hr@2gofinancialservices.com">Email: Main Office</a> | <a href="tel:+256772971878">Tel: Main Office</a> </p>
+        </div>
+      </div>
+    <div>
+    <div class="row">
+      <div class="col">
+        <div class="p-2 border-bottom">
+          <h6>Social Media Links</h6>
+          <a href="https://www.facebook.com"> <img src="images/facebook.png" alt="" height="30" width="30"></a>
+          <a href="tel:+256772971878"><img src="images/whatsapp.png" alt="" height="30" width="30"></a>
+          <a href="mailto:hr@2gofinancialservices.com"><img src="images/google.png" alt="" height="30" width="30"></a>
+          <a href="https://www.twitter.com"><img src="images/twiter.png" alt="" height="30" width="30"></a>
+        </div>
+        <h6>Location</h6>
+        <p class="grey-text text-darken-2">Find us at 72 street, Ovacado Lane, Bushwell Dr. Alaska</p>
+      </div>
+      <div class="col border-top pb-2">
+        <h6>Quick Links & </h6><a href="" class="white-text"></a>
+        <a href="index.html#paint">construction site management</a> <a href="index.html#land">Comprehensive land registration</a> <a href="index.html#land">Land title processing</a>
+        <a href="#">Interior and exterior Designs</a> <a href="#">Plans</a> <a href="index.html#land">Land leasing</a>
+        </a>
+      </div>
+    </div>
+    <p class="text-center border-top pt-3 grey-text text-darken-2 border-light">&copy;2020.copyright by Greene Reservoir Management.</p>
+  </div>
 </body>
-<!--
-          <div class="p-3">
-             <form class="p-5 green darken-4 needs-validation" novalidate>
-              <h4 class="red-text">SignUp</h4>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="firstname">FirstName</label>
-                  <input type="text" class="form-control" id="firstname" required>
-                  <div class="invalid-feedback">
-                    We would love to know you
-                  </div>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="lastname">LastName</label>
-                  <input type="text" class="form-control" id="lastname" required>
-                  <div class="invalid-feedback">
-                    Everyone has a lastname
-                  </div>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputEmail4">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" aria-describedby="emailHelp" required>
-                  <div class="invalid-feedback">
-                    Emails require an @+domainname+.com respectively
-                  </div>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="inputPassword4">Password</label>
-                  <input type="password" class="form-control" id="inputPassword4" required>
-                  <div class="invalid-feedback">
-                    Password must be btn 6-8 aplhanumeric characters and contain at least a symbol.
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="phonenumber">Phonenumber</label>
-                <input type="text" class="form-control" id="phonenumber" placeholder="0772971878" required>
-                <div class="invalid-feedback">
-                  phone numbers are 10 digits precicely.
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="form-group">
-                  <label for="FormControlFile1">Upload a profile photo here (optional)</label>
-                  <input type="file" class="form-control-file" id="FormControlFile1">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputCity">City</label>
-                  <input type="text" class="form-control" id="inputCity" placeholder="kisasi" required>
-                  <div class="invalid-feedback">
-                    Your location helps us connect with you better.
-                  </div>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="inputState">State</label>
-                  <select id="inputState" class="form-control" required>
-                    <option selected>Kampala</option>
-                    <option>Mukono</option>
-                    <option>wakiso</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="autoSizingCheck" required>
-                  <label class="form-check-label" for="autoSizingCheck">
-                    Remember me
-                  </label>
-                </div>
-              </div>
-              <button type="submit" class="btn red darken-4">SignUp</button>
-            </form> 
-          </div>  -->
+<!-- Optional JavaScript -->
+<script type="text/javascript">
+  (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+              }, false);
+          });
+      }, false);
+  })();
+</script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="jquery-3.3.1/dist/jquery.slim.min.js" charset="utf-8" type="text/javascript"></script>
+<script src="js/bootstrap.bundle.min.js" charset="utf-8" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" charset="utf-8" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 </html>
